@@ -39,4 +39,22 @@ public class MaximumNumberTest {
 	public void givenMaximumFloatNumberAtThird_WhenAnalyse_ShouldReturnSameNumber() {
 		Assert.assertEquals((Float) 65.7f, MaximumNumber.maximumNumber(16.6f, 22.3f, 65.7f));
 	}
+
+	// Tc3.1
+	@Test
+	public void givenMaximumStringWordAtFirst_WhenAnalyse_ShouldReturnSameWord() {
+		Assert.assertEquals("peach", MaximumNumber.maximumWord("peach", "apple", "banana"));
+	}
+
+	// Tc3.2
+	@Test
+	public void givenMaximumStringWordAtSecond_WhenAnalyse_ShouldReturnSameWord() {
+		Assert.assertEquals("peach", MaximumNumber.maximumWord("apple", "peach", "banana"));
+	}
+
+	// Tc3.3
+	@Test
+	public void givenMaximumStringWordAtThird_WhenAnalyse_ShouldReturnSameWord() {
+		Assert.assertEquals("peach", MaximumNumber.maximumWord("apple", "banana", "peach"));
+	}
 }

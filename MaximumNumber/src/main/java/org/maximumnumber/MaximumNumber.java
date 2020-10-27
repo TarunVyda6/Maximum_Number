@@ -26,4 +26,15 @@ public class MaximumNumber {
 		return maxNumber;
 	}
 
+	// uc3
+	public static String maximumWord(String firstWord, String secondWord, String thirdWord) {
+		String maxWord = firstWord;
+		if (secondWord.compareTo(maxWord) > 0) {
+			maxWord = secondWord;
+		}
+		if (thirdWord.compareTo(maxWord) > 0) {
+			maxWord = thirdWord;
+		}
+		return maxWord;
+	}
 }
