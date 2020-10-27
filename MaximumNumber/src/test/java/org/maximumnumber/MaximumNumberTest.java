@@ -7,54 +7,54 @@ public class MaximumNumberTest {
 	// Tc1.1
 	@Test
 	public void givenMaximumIntegerNumberAtFirst_WhenAnalyse_ShouldReturnSameNumber() {
-		Assert.assertEquals((Integer) 25, MaximumNumber.maximumNumber(25, 10, 15));
+		Assert.assertEquals((Integer) 25, MaximumNumber.findMaximum(25, 10, 15));
 	}
 
 	// Tc1.2
 	@Test
 	public void givenMaximumIntegerNumberAtSecond_WhenAnalyse_ShouldReturnSameNumber() {
-		Assert.assertEquals((Integer) 90, MaximumNumber.maximumNumber(22, 90, 15));
+		Assert.assertEquals((Integer) 90, MaximumNumber.findMaximum(22, 90, 15));
 	}
 
 	// Tc1.3
 	@Test
 	public void givenMaximumIntegerNumberAtThird_WhenAnalyse_ShouldReturnSameNumber() {
-		Assert.assertEquals((Integer) 65, MaximumNumber.maximumNumber(16, 22, 65));
+		Assert.assertEquals((Integer) 65, MaximumNumber.findMaximum(16, 22, 65));
 	}
 
 	// Tc2.1
 	@Test
 	public void givenMaximumFloatNumberAtFirst_WhenAnalyse_ShouldReturnSameNumber() {
-		Assert.assertEquals((Float) 25.6f, MaximumNumber.maximumNumber(25.6f, 10.4f, 15.6f));
+		Assert.assertEquals((Float) 25.6f, MaximumNumber.findMaximum(25.6f, 10.4f, 15.6f));
 	}
 
 	// Tc2.2
 	@Test
 	public void givenMaximumFloatNumberAtSecond_WhenAnalyse_ShouldReturnSameNumber() {
-		Assert.assertEquals((Float) 90.1f, MaximumNumber.maximumNumber(22.9f, 90.1f, 15.4f));
+		Assert.assertEquals((Float) 90.1f, MaximumNumber.findMaximum(22.9f, 90.1f, 15.4f));
 	}
 
 	// Tc2.3
 	@Test
 	public void givenMaximumFloatNumberAtThird_WhenAnalyse_ShouldReturnSameNumber() {
-		Assert.assertEquals((Float) 65.7f, MaximumNumber.maximumNumber(16.6f, 22.3f, 65.7f));
+		Assert.assertEquals((Float) 65.7f, MaximumNumber.findMaximum(16.6f, 22.3f, 65.7f));
 	}
 
 	// Tc3.1
 	@Test
 	public void givenMaximumStringWordAtFirst_WhenAnalyse_ShouldReturnSameWord() {
-		Assert.assertEquals("peach", MaximumNumber.maximumWord("peach", "apple", "banana"));
+		Assert.assertEquals("peach", MaximumNumber.findMaximum("peach", "apple", "banana"));
 	}
 
 	// Tc3.2
 	@Test
 	public void givenMaximumStringWordAtSecond_WhenAnalyse_ShouldReturnSameWord() {
-		Assert.assertEquals("peach", MaximumNumber.maximumWord("apple", "peach", "banana"));
+		Assert.assertEquals("peach", MaximumNumber.findMaximum("apple", "peach", "banana"));
 	}
 
 	// Tc3.3
 	@Test
 	public void givenMaximumStringWordAtThird_WhenAnalyse_ShouldReturnSameWord() {
-		Assert.assertEquals("peach", MaximumNumber.maximumWord("apple", "banana", "peach"));
+		Assert.assertEquals("peach", MaximumNumber.findMaximum("apple", "banana", "peach"));
 	}
 }
