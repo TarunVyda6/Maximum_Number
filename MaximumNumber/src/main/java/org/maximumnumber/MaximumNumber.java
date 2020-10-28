@@ -1,33 +1,31 @@
 package org.maximumnumber;
 
-//Refactor2
+import java.util.*;
+
+//uc4
 public class MaximumNumber<E extends Comparable<E>> {
 
-	E firstWord, secondWord, thirdWord;
+	List<E> numberList = new ArrayList<>();
 
-	public MaximumNumber(E firstWord, E secondWord, E thirdWord) {
-		super();
-		this.firstWord = firstWord;
-		this.secondWord = secondWord;
-		this.thirdWord = thirdWord;
+	public MaximumNumber(E... parameters) {
+		for (E values : parameters) {
+			this.numberList.add(values);
+		}
 	}
 
 	public E testMaximum() {
 
-		return findMaximum(firstWord, secondWord, thirdWord);
+		return findMaximum(numberList);
 	}
 
-	// Refactor1
-	public static <E extends Comparable<E>> E findMaximum(E firstWord, E secondWord, E thirdWord) {
+	public static <E extends Comparable<E>> E findMaximum(List<E> numberList) {
 
-		E maxWord = firstWord;
-		if (secondWord.compareTo(maxWord) > 0) {
-			maxWord = secondWord;
+		try {
+			return Collections.max(numberList);
+		} catch (NoSuchElementException e) {
+			return null;
 		}
-		if (thirdWord.compareTo(maxWord) > 0) {
-			maxWord = thirdWord;
-		}
-		return maxWord;
+
 	}
 
 }
