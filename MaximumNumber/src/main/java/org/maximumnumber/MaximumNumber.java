@@ -15,7 +15,13 @@ public class MaximumNumber<E extends Comparable<E>> {
 
 	public E testMaximum() {
 
+		printMax();
 		return findMaximum(numberList);
+	}
+
+	// uc5
+	private void printMax() {
+		System.out.println("maximum from the list is : " + findMaximum(numberList));
 	}
 
 	public static <E extends Comparable<E>> E findMaximum(List<E> numberList) {
